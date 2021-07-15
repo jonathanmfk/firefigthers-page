@@ -1,0 +1,35 @@
+<nav class="nav-bar">
+  <div class="navigation-container">
+    <div class="logo-home">
+      <img [src]="logo" alt="logoBombero" width="76px" height="76px">
+      <h3 class="nav-title">{{navTitle}}</h3>
+    </div>
+
+    <div class="option-container">
+      <div class="option">
+        <a routerLink="/home">
+          <img [src]="imgUrl.homeIcon" alt="nuestros servicios">
+          Inicio
+        </a>
+      </div>
+      <div class="option">
+        <a routerLink="/quienes-somos">
+          <img [src]="imgUrl.aboutUsIcon" alt="nuestros servicios">
+          Quienes Somos
+        </a>
+      </div>
+      <div class="option">
+        <a routerLink="/nuestro-servicios">
+          <img [src]="imgUrl.serviceIcon" alt="nuestros servicios">
+          Nuestros Servicios
+        </a>
+      </div>
+      <div class="option">
+        <a routerLink="/pqrsd">
+          <img [src]="imgUrl.pqrsdIcon" alt="nuestros servicios">
+          PQRSD
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
