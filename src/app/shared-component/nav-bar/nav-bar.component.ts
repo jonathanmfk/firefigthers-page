@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-nav-bar',
+  selector: 'sl-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  rute = 'assets/icons/';
+  ruth = 'assets/icons/';
   imgUrl = {
-    homeIcon: `${this.rute}home_alt_outline.svg`,
-    aboutUsIcon: `${this.rute}group.svg`,
-    serviceIcon: `${this.rute}notification_outline_plus.svg`,
-    pqrsdIcon: `${this.rute}message_plus_alt.svg`
+    homeIcon: `${this.ruth}home_alt_outline.svg`,
+    serviceIcon: `${this.ruth}notification_outline_plus.svg`,
+    aboutUsIcon: `${this.ruth}group.svg`,
+    pqrsdIcon: `${this.ruth}message_plus_alt.svg`
   };
   logo = 'assets/img/logo/escudo_bomberos.png'
   navTitle = "BOMBEROS LOS PATIOS";

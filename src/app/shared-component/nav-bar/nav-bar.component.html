@@ -1,0 +1,26 @@
+<nav mat-tab-nav-bar [backgroundColor]="'primary'" class="mat-elevation-z2">
+  <div fxLayout.xs="column" fxLayoutAlign.xs="center center">
+
+
+    <div class="logo-home" fxLayout.xs="row" fxLayout="row" fxLayoutAlign="center">
+      <img [src]="logo" alt="logo" width="50rem" height="50rem">
+      <div fxFlexAlign.gt-xs>
+        <h2>Bomberos Los Patios</h2>
+      </div>
+    </div>
+    <div fxLayout.xs="row" fxLayoutAlign.xs="center center">
+      <a mat-tab-link>
+        <img [src]="imgUrl.homeIcon" alt="home" matTooltip="Inicio">
+      </a>
+      <a mat-tab-link>
+        <img [src]="imgUrl.serviceIcon" alt="Our Services" matTooltip="Nuestros Servicios">
+      </a>
+      <a mat-tab-link>
+        <img [src]="imgUrl.aboutUsIcon" alt="about Us" matTooltip="Sobre Nosotros">
+      </a>
+      <a mat-tab-link>
+        <img [src]="imgUrl.pqrsdIcon" alt="PQRSD" matTooltip="PQRSD">
+      </a>
+    </div>
+  </div>
+</nav>
