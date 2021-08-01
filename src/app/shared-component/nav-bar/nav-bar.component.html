@@ -1,0 +1,17 @@
+<nav mat-tab-nav-bar backgroundColor="primary" class="mat-elevation-z2">
+
+  <div class="nav-container" fxLayout.xs="column" fxLayoutAlign="space-between center" fxLayout="row"
+    fxLayoutAlign.xs="center center">
+
+    <div class="logo-home elevation" fxLayout.xs="row" fxLayout="row" fxLayoutAlign="center center">
+      <img class="hide" [src]="logo" alt="logo" width="50rem" height="50rem">
+      <h2 class="title-nav">{{TITLE}}</h2>
+    </div>
+
+    <div fxLayout.xs="row" fxLayoutAlign.xs="center center">
+      <a mat-tab-link class="elevation" *ngFor="let link of navLinks" [routerLink]="link.link">
+        <img [src]="link.icon" [alt]="link.textAlt" [matTooltip]="link.textTip">
+      </a>
+    </div>
+  </div>
+</nav>
