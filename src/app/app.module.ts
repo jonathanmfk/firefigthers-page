@@ -7,9 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ComponentModule } from './components/components.module';
+import { SharedComponentModule } from './shared-component/shared-component.module';
+import { NavBarComponent } from './shared-component/nav-bar/nav-bar.component';
 
 @NgModule({
-	declarations: [ AppComponent ],
+	declarations: [ AppComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -17,9 +19,11 @@ import { ComponentModule } from './components/components.module';
 		BrowserAnimationsModule,
     MatTabsModule,
     MatTooltipModule,
-		ComponentModule
+		ComponentModule,
+		SharedComponentModule
 	],
 	providers: [],
-	bootstrap: [ AppComponent ]
+	bootstrap: [ AppComponent ],
+/* 	entryComponents:[NavBarComponent] */
 })
 export class AppModule {}

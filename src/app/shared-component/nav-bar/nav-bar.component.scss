@@ -1,17 +1,30 @@
-.div {
-	float: none;
-  width: max-content;
-}
+@import '~@angular/material/theming';
 
-.color {
-  background-color: #D50000;
+.nav-container {
+  display: contents;
+  width: 100%;
 }
-
 ::ng-deep .mat-tab-links {
   justify-content: space-between;
-  
 }
-
 .logo-home {
   margin-left: 4rem;
+}
+.title-nav {
+  padding-top: 10px;
+  color: white;
+}
+.elevation {
+  @include mat-elevation-transition;
+  @include mat-elevation(0);
+
+  &:hover {
+    @include mat-elevation(8);
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .hide {
+    display: none;
+  }
 }
