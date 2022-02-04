@@ -8,7 +8,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ComponentModule } from './components/components.module';
 import { SharedComponentModule } from './shared-component/shared-component.module';
-import { NavBarComponent } from './shared-component/nav-bar/nav-bar.component';
 
 @NgModule({
 	declarations: [ AppComponent],
@@ -24,6 +23,5 @@ import { NavBarComponent } from './shared-component/nav-bar/nav-bar.component';
 	],
 	providers: [],
 	bootstrap: [ AppComponent ],
-/* 	entryComponents:[NavBarComponent] */
 })
 export class AppModule {}

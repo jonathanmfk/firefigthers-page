@@ -9,7 +9,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatRippleModule } from '@angular/material/core';
 import { AppRoutingModule } from '../app-routing.module';
 
-
 @NgModule({
   declarations: [
     NavBarComponent,
