@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="openDrawer()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <img class="hide" [src]="logo" alt="logo" width="50rem" height="50rem" style="margin-right: 5px;">
+    <span>{{titleNav}}</span>
+  </div>
+
+  <span class="example-spacer"></span>
+  <button mat-icon-button>
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>

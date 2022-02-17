@@ -1,0 +1,88 @@
+<div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
+  <div class="card-example">
+    <div class="card-body">
+      <ngb-carousel>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[0]" alt="Random first slide" class="w-100" style="width: 100%; height: 50vh">
+          </div>
+          <div class="carousel-caption">
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[1]" alt="Random first slide" class="w-100" style="width: 100%; height: 50vh">
+          </div>
+          <div class="carousel-caption">
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[2]" alt="Random first slide" class="w-100" style="width: 100%; height: 50vh">
+          </div>
+          <div class="carousel-caption">
+            <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+   </div>
+
+  <div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
+    <div fxFlex fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around start">
+      <ng-container *ngFor="let item of dataCards0">
+        <mat-card class="card">
+          <mat-card-header>
+            <mat-card-title>
+              {{item.title}}
+            </mat-card-title>
+            <mat-card-subtitle>
+              {{item.subtitle}}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image [src]="item.imgUrl">
+          <mat-card-content>
+            <p>
+              {{item.body}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <ng-container *ngFor="let buton of item.buttons">
+              <button mat-button>{{buton}}</button>
+            </ng-container>
+          </mat-card-actions>
+        </mat-card>
+      </ng-container>
+    </div>
+    <div fxFlex fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around start">
+      <ng-container *ngFor="let item of dataCards1">
+        <mat-card class="card">
+          <mat-card-header>
+            <mat-card-title>
+              {{item.title}}
+            </mat-card-title>
+            <mat-card-subtitle>
+              {{item.subtitle}}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image [src]="item.imgUrl">
+          <mat-card-content>
+            <p>
+              {{item.body}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <ng-container *ngFor="let buton of item.buttons">
+              <button mat-button>{{buton}}</button>
+            </ng-container>
+          </mat-card-actions>
+        </mat-card>
+      </ng-container>
+    </div>
+  </div>
+</div>
