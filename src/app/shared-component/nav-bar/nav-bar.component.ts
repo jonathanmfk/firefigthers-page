@@ -1,20 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-	selector: 'nav-bar',
+	selector: 'app-nav-bar',
 	templateUrl: './nav-bar.component.html',
 	styleUrls: [ './nav-bar.component.scss' ]
 })
 export class NavBarComponent implements OnInit {
+	@Output() buttonMenu = new EventEmitter();
+
 	activeLinkIndex = -1;
-	navLinks: any[];
+	//navLinks: any[];
 	readonly logo = 'assets/img/logo/escudo_bomberos.png';
-	readonly TITLE = 'BOMBEROS LOS PATIOS';
+	readonly titleNav = 'BOMBEROS LOS PATIOS';
 	ruth: any;
 
 	constructor(private router: Router) {
-		this.ruth = 'assets/icons/';
+		/* this.ruth = 'assets/icons/';
 		this.navLinks = [
 			{
 				icon: `${this.ruth}home_alt_outline.svg`,
@@ -40,14 +42,12 @@ export class NavBarComponent implements OnInit {
 				textAlt: `PQRSD`,
 				textTip: `PQRSD`
 			}
-		];
+		]; */
 	}
 
-	ngOnInit(): void {
-		this.router.events.subscribe((res) => {
-			this.activeLinkIndex = this.navLinks.indexOf(
-				this.navLinks.find((tab) => tab.link === '.' + this.router.url)
-			);
-		});
+	openDrawer() {
+		this.buttonMenu.emit();
 	}
+
+	ngOnInit(): void {}
 }
