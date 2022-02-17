@@ -1,11 +1,52 @@
-<div class="container">
-  <ngb-carousel>
-    <ng-container *ngFor="let img of imgCarousel">
-      <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <img [src]="img.img" alt="Random first slide">
-        </div>
-      </ng-template>
+<div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
+  <div fxFlex fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around start">
+    <ng-container *ngFor="let item of dataCards0">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>
+            {{item.title}}
+          </mat-card-title>
+          <mat-card-subtitle>
+            {{item.subtitle}}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="item.imgUrl">
+        <mat-card-content>
+          <p>
+            {{item.body}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <ng-container *ngFor="let buton of item.buttons">
+            <button mat-button>{{buton}}</button>
+          </ng-container>
+        </mat-card-actions>
+      </mat-card>
     </ng-container>
-  </ngb-carousel>
+  </div>
+  <div fxFlex fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around start">
+    <ng-container *ngFor="let item of dataCards1">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>
+            {{item.title}}
+          </mat-card-title>
+          <mat-card-subtitle>
+            {{item.subtitle}}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="item.imgUrl">
+        <mat-card-content>
+          <p>
+            {{item.body}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <ng-container *ngFor="let buton of item.buttons">
+            <button mat-button>{{buton}}</button>
+          </ng-container>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
+  </div>
 </div>
