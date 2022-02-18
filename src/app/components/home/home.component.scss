@@ -3,3 +3,36 @@
   max-width: 20rem;
   margin: 1rem;
 }
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.card-example {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 0.25rem;
+	max-width: 36rem;
+}
+
+
+/* ngb-carousel .picsum-img-wrapper {
+  position: relative;
+  height: 0;
+  padding-top: 55%;
+}
+
+ngb-carousel .picsum-img-wrapper>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+} */

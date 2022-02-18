@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { ComponentModule } from './components/components.module';
 import { SharedComponentModule } from './shared-component/shared-component.module';
 import { MenuComponent } from './menu/menu.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { MenuComponent } from './menu/menu.component';
 
 		ComponentModule,
 		SharedComponentModule,
+  NgbModule,
 	],
 	providers: [],
 	bootstrap: [ AppComponent ]
