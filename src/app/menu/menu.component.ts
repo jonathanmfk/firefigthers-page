@@ -10,6 +10,7 @@ import { Section } from 'src/app/app.component';
 export class MenuComponent implements OnInit {
 	activeLinkIndex = -1;
 	navLinks: any[] = new Array<any>();
+	readonly logo = 'assets/img/logo/escudo_bomberos.png';
 
 	constructor(private router: Router) {}
 
