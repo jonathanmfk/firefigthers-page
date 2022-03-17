@@ -1,38 +1,358 @@
-<div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
-  <div class="card-example">
-    <div class="card-body">
-      <ngb-carousel>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[0]" alt="Random first slide" class="w-100" style="width: 100%; height: 50vh">
-          </div>
-          <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[1]" alt="Random first slide" class="w-100" style="width: 100%; height: 50vh">
-          </div>
-          <div class="carousel-caption">
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[2]" alt="Random first slide" class="w-100" style="width: 100%; height: 50vh">
-          </div>
-          <div class="carousel-caption">
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </div>
-        </ng-template>
-      </ngb-carousel>
-    </div>
-   </div>
+<div fxFlex fxLayout="column">
+  <div fxFlex fxLayout="column" fxLayoutAlign="space-around center" style="margin-bottom: 1rem;">
 
+    <mat-card class="card">
+      <div class="card-body">
+        <ngb-carousel>
+          <ng-container *ngFor="let item of carousel">
+            <ng-template ngbSlide>
+              <div class="picsum-img-wrapper">
+                <img [src]="item.imgUrl" alt="Random first slide" class="w-100" style="width: 100%; height: 50vh">
+              </div>
+              <div class="carousel-caption">
+                <h3>{{item.title}}</h3>
+                <p>{{item.body}}</p>
+              </div>
+            </ng-template>
+          </ng-container>
+        </ngb-carousel>
+      </div>
+    </mat-card>
+
+    <div fxFlex fxLayoutAlign="space-around center" fxLayout="row" fxLayout.md="column" fxLayout.sm="column"
+      fxLayout.xs="column" fxLayoutGap="1rem" fxLayoutGap.sm="2px" fxLayoutGap.xs="2px">
+      <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="1rem" fxLayoutGap.sm="2px"
+        fxLayoutGap.xs="2px">
+        <div fxLayout="row" fxLayoutGap="1rem" fxLayoutGap.sm="2px" fxLayoutGap.xs="2px">
+          <mat-card class="custom-mat-card" style="background-color: #f31313">
+            <mat-card-content fxLayoutAlign="center center">
+              <img mat-card-image [src]="'/assets/img/others/fireman.svg'" style="width: 70%; height: auto;">
+            </mat-card-content>
+            <mat-card-title style="color: white;" fxLayoutAlign="center center">Bomberos</mat-card-title>
+            <button mat-raised-button class="buttom-container" [style]="'background-color: #D50000'">5802288</button>
+          </mat-card>
+
+          <mat-card class="custom-mat-card" style="background-color: #388E3C">
+            <mat-card-content fxLayoutAlign="center center">
+              <img mat-card-image [src]="'/assets/img/others/policeman.svg'" style="width: 70%; height: auto;">
+            </mat-card-content>
+            <mat-card-title style="color: white;" fxLayoutAlign="center center">Policia</mat-card-title>
+            <button mat-raised-button class="buttom-container" style="background-color: #00600F">5754780</button>
+          </mat-card>
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="1rem" fxLayoutGap.sm="2px" fxLayoutGap.xs="2px">
+          <mat-card class="custom-mat-card" style="background-color: #0277BD; max-width: 10rem;">
+            <mat-card-content fxLayoutAlign="center center">
+              <img mat-card-image [src]="'/assets/img/others/man-doctor.svg'" style="width: 70%; height: auto;">
+            </mat-card-content>
+            <mat-card-title style="color: white;" fxLayoutAlign="center center">Hospital local
+            </mat-card-title>
+            <button mat-raised-button class="buttom-container" style="background-color: #004C8C">5552170</button>
+          </mat-card>
+
+          <mat-card class="custom-mat-card" style="background-color: #EF6C00; max-width: 10rem;">
+            <mat-card-content fxLayoutAlign="center center">
+              <img mat-card-image [src]="'/assets/img/others/civil.svg'" style="width: 70%; height: auto;">
+            </mat-card-content>
+            <mat-card-title style="color: white;" fxLayoutAlign="center center">Defensa civil</mat-card-title>
+            <button mat-raised-button class="buttom-container" style="background-color: #B53D00">144</button>
+          </mat-card>
+        </div>
+      </div>
+
+      <div fxLayoutAlign="center center" fxLayout="row" fxLayoutGap="1rem" fxLayoutGap.sm="2px" fxLayoutGap.xs="0rem">
+        <mat-card class="custom-mat-card" style="background-color: #A011FF">
+          <mat-card-content fxLayoutAlign="center center">
+            <img mat-card-image [src]="'/assets/img/others/sala-crisis.svg'" style="width: 60%; height: auto;">
+          </mat-card-content>
+          <mat-card-title style="color: white;" fxLayoutAlign="center center">Sala de crisis</mat-card-title>
+          <button mat-raised-button class="buttom-container" style="background-color: #6800CA">3053623475</button>
+        </mat-card>
+      </div>
+
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxFlex="100" fxLayoutAlign="space-around start"
+    fxLayoutAlign.sm="center center" fxLayoutAlign.xs="center center">
+    <div fxFlex="65" style="margin: 1rem;">
+      <mat-card style="min-width: 350px;">
+        <mat-tab-group mat-align-tabs="center">
+          <mat-tab label="Administrativo">
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/C-HernandezMarcos-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Marco David Hernández</mat-card-title>
+                <mat-card-subtitle>Comandante</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/C-OrozcoWilliam-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>William Orozco</mat-card-title>
+                <mat-card-subtitle>Sub-Comandante</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-BautistaBetsy-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Betsi Bautista</mat-card-title>
+                <mat-card-subtitle>Secretaria</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+          </mat-tab>
+          <mat-tab label="Operativo">
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/CP-GarciaCarlos-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Carlos García</mat-card-title>
+                <mat-card-subtitle>Capitanes</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/ST-CoronelJose-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>José Fernando Coronel</mat-card-title>
+                <mat-card-subtitle>Sub-teniente</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/ST-FlorezEgdy-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Egdy Flórez</mat-card-title>
+                <mat-card-subtitle>Sub-teniente</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/ST-MendozaLeonardo-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Leonardo Mendoza</mat-card-title>
+                <mat-card-subtitle>Sub-teniente</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <!-- Sargentos -->
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/S-MoncadaJuan-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Juán Moncada</mat-card-title>
+                <mat-card-subtitle>Sargentos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/C-HernandezMarcos-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Marco Hernández</mat-card-title>
+                <mat-card-subtitle>Sargentos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/C-GaleanoHermes-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Hermes Galeano</mat-card-title>
+                <mat-card-subtitle>Sargentos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/C-PizaPablo-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Pablo Piza</mat-card-title>
+                <mat-card-subtitle>Sargentos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <!-- Cabos -->
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/C-DuarteYahir-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Yahir Duarte</mat-card-title>
+                <mat-card-subtitle>Cabos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/C-GarciaJose-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>José García</mat-card-title>
+                <mat-card-subtitle>Cabos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/C-OrozcoWilliam-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>William Orozco</mat-card-title>
+                <mat-card-subtitle>Cabos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/C-SuarezAndres-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Andrés Suárez</mat-card-title>
+                <mat-card-subtitle>Cabos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/C-MorenoAlexander-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Alexander Moreno</mat-card-title>
+                <mat-card-subtitle>Cabos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-SanchezEdward-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Edward Sánchez</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-ChaconGustavo-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Gustavo Chacón</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-RodriguezJohel-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Johel Rodríguez</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-HolguinJuan-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Juán Holguín</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-CardenasGloria-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Gloria Cárdenas</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-CercadoJesus_Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Jesus Cercado</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-ContrerasJosue-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Josué Contreras</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-LopezCarlos-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Carlos López</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-PenuelaGerson-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Gerson Peñuela</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-PizaLuis-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Luis Piza</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar style="background-image: url('https://bomberoslospatios.org/fotosbomberos/B-VergelReinel-Small.jpg');
+                  background-size: cover;"></div>
+                <mat-card-title>Reinel Vergel</mat-card-title>
+                <mat-card-subtitle>Bomberos</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card>
+    </div>
+    <div fxFlex style="margin: 1rem;">
+      <mat-card>
+        <mat-card-title>
+          Redes Sociales
+        </mat-card-title>
+        <mat-card-content style="min-width: 350px;">
+          <div class="fb-page" data-href="https://www.facebook.com/bomberoslospatios/" data-tabs="timeline"
+            data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
+            data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/bomberoslospatios/" class="fb-xfbml-parse-ignore"><a
+                href="https://www.facebook.com/bomberoslospatios/">Bomberos Los Patios</a></blockquote>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button>Facebook</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<!--
   <div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
     <div fxFlex fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around start">
       <ng-container *ngFor="let item of dataCards0">
@@ -85,4 +405,4 @@
       </ng-container>
     </div>
   </div>
-</div>
+</div> -->

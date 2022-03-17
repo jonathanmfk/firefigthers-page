@@ -8,6 +8,12 @@ export interface DataCard {
 	buttons?: Array<string>;
 }
 
+export interface Carousel {
+	title: string;
+	body: string;
+	imgUrl: string;
+}
+
 @Component({
 	selector: 'app-home',
 	templateUrl: './home.component.html',
@@ -16,9 +22,118 @@ export interface DataCard {
 export class HomeComponent implements OnInit {
 	constructor() {}
 
-	images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+	images = [
+		'/assets/img/carousel/0.jpg',
+		'/assets/img/carousel/1.jpg',
+		'/assets/img/carousel/2.jpg',
+		'/assets/img/carousel/3.jpg',
+		'/assets/img/carousel/4.jpg',
+		'/assets/img/carousel/5.jpg',
+		'/assets/img/carousel/6.jpg',
+		'/assets/img/carousel/7.jpg',
+		'/assets/img/carousel/8.jpeg',
+		'/assets/img/carousel/9.jpeg',
+		'/assets/img/carousel/10.jpeg'
+	];
 
 	ngOnInit(): void {}
+
+	carousel: Carousel[] = [
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[0]
+		},
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[1]
+		},
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[2]
+		},
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[3]
+		},
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[4]
+		},
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[5]
+		},
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[6]
+		},
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[7]
+		},
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[8]
+		},
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[9]
+		},
+		{
+			title: 'Labores sociales',
+			body: 'Busca más acerca de nuestros servicios',
+			imgUrl: this.images[10]
+		}
+	];
+
+	cardInfoService = [
+		{
+			backgroundCard: 'background-color: #f31313',
+			title: 'Bomberos',
+			number: 5802288,
+			backgroundButton: 'background-color: #D50000',
+			img: '/assets/img/others/fireman.svg'
+		},
+		{
+			backgroundCard: 'background-color: #0277BD',
+			title: 'Hospital local',
+			number: 5552170,
+			backgroundButton: 'background-color: #004C8C',
+			img: '/assets/img/others/man-doctor.svg'
+		},
+		{
+			backgroundCard: 'background-color: #388E3C',
+			title: 'Policia',
+			number: 5754780,
+			backgroundButton: 'background-color: #00600F',
+			img: '/assets/img/others/policeman.svg'
+		},
+		{
+			backgroundCard: 'background-color: #A011FF',
+			title: 'Sala de crisis',
+			number: 3053623475,
+			backgroundButton: 'background-color: #6800CA',
+			img: '/assets/img/others/sala-crisis.svg'
+		},
+		{
+			backgroundCard: 'background-color: #EF6C00',
+			title: 'Defensa civil',
+			number: 144,
+			backgroundButton: 'background-color: #B53D00',
+			img: '/assets/img/others/civil.svg'
+		},
+
+	];
 
 	dataCards0: DataCard[] = [
 		{
