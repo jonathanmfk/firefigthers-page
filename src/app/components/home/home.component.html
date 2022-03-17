@@ -74,9 +74,10 @@
     </div>
   </div>
 
-  <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-around start">
-    <div fxFlex="50" style="margin: 1rem;">
-      <mat-card>
+  <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxFlex="100" fxLayoutAlign="space-around start"
+    fxLayoutAlign.sm="center center" fxLayoutAlign.xs="center center">
+    <div fxFlex="65" style="margin: 1rem;">
+      <mat-card style="min-width: 350px;">
         <mat-tab-group mat-align-tabs="center">
           <mat-tab label="Administrativo">
             <mat-card>
@@ -330,22 +331,20 @@
         </mat-tab-group>
       </mat-card>
     </div>
-    <div fxFlex="50" style="margin: 1rem;">
+    <div fxFlex style="margin: 1rem;">
       <mat-card>
         <mat-card-title>
           Redes Sociales
         </mat-card-title>
-        <mat-card-content>
-          <span style="vertical-align: bottom; width: 499px; height: 450px;">
-            <iframe name="f85b3e71f67876" data-testid="fb:page Facebook Social Plugin"
-              title="fb:page Facebook Social Plugin" allowtransparency="true" allowfullscreen="true" scrolling="no"
-              allow="encrypted-media" style="border: medium none; visibility: visible; width: 499px; height: 450px;"
-              src="https://www.facebook.com/v10.0/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df3b003efae0ef0a%26domain%3Dbomberoslospatios.org%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fbomberoslospatios.org%252Ff10bbb3c31b2b98%26relation%3Dparent.parent&amp;container_width=499&amp;height=450&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2FBomberos-Los-Patios-102876981302510%2F&amp;locale=es_ES&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;tabs=timeline&amp;width=500"
-              class="" width="500px" height="450px" frameborder="0">
-            </iframe>
-          </span>
+        <mat-card-content style="min-width: 350px;">
+          <div class="fb-page" data-href="https://www.facebook.com/bomberoslospatios/" data-tabs="timeline"
+            data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
+            data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/bomberoslospatios/" class="fb-xfbml-parse-ignore"><a
+                href="https://www.facebook.com/bomberoslospatios/">Bomberos Los Patios</a></blockquote>
+          </div>
         </mat-card-content>
-        <mat-card-actions >
+        <mat-card-actions>
           <button mat-raised-button>Facebook</button>
         </mat-card-actions>
       </mat-card>
