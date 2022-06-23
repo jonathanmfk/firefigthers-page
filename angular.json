@@ -1,8 +1,5 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "9447f530-3db7-4677-a69f-424521f92b35"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -11,9 +8,6 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "",
@@ -34,13 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
-              "src/custom.scss",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/chart.js/dist/chart.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -106,7 +96,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -115,10 +104,7 @@
       }
     }
   },
-  "schematics": {
-    "@schematics/angular:component": {
-      "skipTests": true
-    }
-  },
-  "defaultProject": "firefigthers-page"
+  "cli": {
+    "analytics": "aeecd78c-37a4-46cb-a6a7-3d719f1711ab"
+  }
 }

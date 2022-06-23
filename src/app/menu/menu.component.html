@@ -9,6 +9,7 @@
         Mostrar más cosas
       </button>
     </div>
+
     <mat-nav-list>
       <mat-selection-list #shoes [multiple]="false">
         <div mat-subheader>Opciones</div>
@@ -25,16 +26,9 @@
           <div mat-line> {{exp.updated | date}} </div>
         </mat-list-option>
         <mat-divider></mat-divider>
-        <!--<div mat-subheader>Contacto</div>
-
-         mat-list-option *ngFor="let cont of contact">
-          <mat-icon mat-list-icon>{{cont.icon}}</mat-icon>
-          <div mat-line>{{cont.name}}</div>
-          <div mat-line> {{cont.updated | date}} </div>
-        </mat-list-option> -->
-
       </mat-selection-list>
     </mat-nav-list>
+
   </mat-drawer>
 
   <mat-drawer-content>
@@ -43,3 +37,12 @@
     <app-footer-bar></app-footer-bar>
   </mat-drawer-content>
 </mat-drawer-container>
+
+
+<!--<div mat-subheader>Contacto</div>
+
+ mat-list-option *ngFor="let cont of contact">
+  <mat-icon mat-list-icon>{{cont.icon}}</mat-icon>
+  <div mat-line>{{cont.name}}</div>
+  <div mat-line> {{cont.updated | date}} </div>
+</mat-list-option> -->

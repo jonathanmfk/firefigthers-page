@@ -10,13 +10,13 @@ export class NavBarComponent implements OnInit {
 	@Output() buttonMenu = new EventEmitter();
 
 	activeLinkIndex = -1;
-	//navLinks: any[];
+	navLinks: any[];
 	readonly logo = 'assets/img/logo/escudo_bomberos.png';
 	readonly titleNav = 'BOMBEROS LOS PATIOS';
 	ruth: any;
 
 	constructor(private router: Router) {
-		/* this.ruth = 'assets/icons/';
+		this.ruth = 'assets/icons/';
 		this.navLinks = [
 			{
 				icon: `${this.ruth}home_alt_outline.svg`,
@@ -42,7 +42,7 @@ export class NavBarComponent implements OnInit {
 				textAlt: `PQRSD`,
 				textTip: `PQRSD`
 			}
-		]; */
+		];
 	}
 
 	openDrawer() {
